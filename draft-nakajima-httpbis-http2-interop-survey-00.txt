@@ -61,34 +61,58 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Requirements  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   3.  Interoperability Test Target  . . . . . . . . . . . . . . . .   2
+   2.  Requirements  . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Interoperability Test Target  . . . . . . . . . . . . . . . .   3
    4.  Interoperability Test Area  . . . . . . . . . . . . . . . . .   3
      4.1.  Upgrade . . . . . . . . . . . . . . . . . . . . . . . . .   3
      4.2.  Framing . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.3.  Flow Control  . . . . . . . . . . . . . . . . . . . . . .   3
-     4.4.  Streams and Multiplexing  . . . . . . . . . . . . . . . .   3
-     4.5.  Header Compression  . . . . . . . . . . . . . . . . . . .   3
-     4.6.  Connection Management . . . . . . . . . . . . . . . . . .   3
-     4.7.  Stream Prioritization . . . . . . . . . . . . . . . . . .   3
-     4.8.  Authentication  . . . . . . . . . . . . . . . . . . . . .   3
-     4.9.  Server Push . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.3.  Flow Control  . . . . . . . . . . . . . . . . . . . . . .   4
+     4.4.  Streams and Multiplexing  . . . . . . . . . . . . . . . .   4
+     4.5.  Header Compression  . . . . . . . . . . . . . . . . . . .   4
+     4.6.  Connection Management . . . . . . . . . . . . . . . . . .   4
+     4.7.  Stream Prioritization . . . . . . . . . . . . . . . . . .   4
+     4.8.  Authentication  . . . . . . . . . . . . . . . . . . . . .   4
+     4.9.  Server Push . . . . . . . . . . . . . . . . . . . . . . .   4
      4.10. TLS Negotiation . . . . . . . . . . . . . . . . . . . . .   4
      4.11. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   4
      4.12. Opportunistic Encryption  . . . . . . . . . . . . . . . .   4
      4.13. Alternative Services  . . . . . . . . . . . . . . . . . .   4
    5.  Interoperability Test Results . . . . . . . . . . . . . . . .   4
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
-   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
-   8.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   4
-   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .   4
-     9.3.  URL References  . . . . . . . . . . . . . . . . . . . . .   4
+     5.1.  Upgrade . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     5.2.  Framing . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     5.3.  Flow Control  . . . . . . . . . . . . . . . . . . . . . .   4
+     5.4.  Streams and Multiplexing  . . . . . . . . . . . . . . . .   4
+     5.5.  Header Compression  . . . . . . . . . . . . . . . . . . .   4
+     5.6.  Connection Management . . . . . . . . . . . . . . . . . .   4
+     5.7.  Stream Prioritization . . . . . . . . . . . . . . . . . .   4
+     5.8.  Authentication  . . . . . . . . . . . . . . . . . . . . .   4
+     5.9.  Server Push . . . . . . . . . . . . . . . . . . . . . . .   4
+     5.10. TLS Negotiation . . . . . . . . . . . . . . . . . . . . .   4
+     5.11. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   5
+     5.12. Opportunistic Encryption  . . . . . . . . . . . . . . . .   5
+     5.13. Alternative Services  . . . . . . . . . . . . . . . . . .   5
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
+   8.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   5
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+     9.3.  URL References  . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Introduction
 
    [TBD]
+
+
+
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 2]
+
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
+
 
 2.  Requirements
 
@@ -103,16 +127,6 @@ Table of Contents
    test.  Each implementation has been classified according to the roles
    "client", "server", "intermediary" which are defined in [RFC7230].
    Table 1 shows name and roles of tested implementations.
-
-
-
-
-
-
-Nakajima                 Expires January 1, 2015                [Page 2]
-
-Internet-Draft       HTTP/2 Interoperability Survey            June 2014
-
 
            +---------------------+----------------------------+
            | Name                | Roles                      |
@@ -144,6 +158,18 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 4.2.  Framing
 
+
+
+
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 3]
+
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
+
+
 4.3.  Flow Control
 
 4.4.  Streams and Multiplexing
@@ -158,18 +184,6 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 4.9.  Server Push
 
-
-
-
-
-
-
-
-Nakajima                 Expires January 1, 2015                [Page 3]
-
-Internet-Draft       HTTP/2 Interoperability Survey            June 2014
-
-
 4.10.  TLS Negotiation
 
 4.11.  TLS Cipher Suite
@@ -179,6 +193,44 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 4.13.  Alternative Services
 
 5.  Interoperability Test Results
+
+5.1.  Upgrade
+
+5.2.  Framing
+
+5.3.  Flow Control
+
+5.4.  Streams and Multiplexing
+
+5.5.  Header Compression
+
+5.6.  Connection Management
+
+5.7.  Stream Prioritization
+
+5.8.  Authentication
+
+5.9.  Server Push
+
+5.10.  TLS Negotiation
+
+
+
+
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 4]
+
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
+
+
+5.11.  TLS Cipher Suite
+
+5.12.  Opportunistic Encryption
+
+5.13.  Alternative Services
 
 6.  Security Considerations
 
@@ -221,7 +273,11 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 
 
-Nakajima                 Expires January 1, 2015                [Page 4]
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 5]
 
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
@@ -277,7 +333,7 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 
 
-Nakajima                 Expires January 1, 2015                [Page 5]
+Nakajima                 Expires January 1, 2015                [Page 6]
 
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
@@ -333,4 +389,4 @@ Author's Address
 
 
 
-Nakajima                 Expires January 1, 2015                [Page 6]
+Nakajima                 Expires January 1, 2015                [Page 7]

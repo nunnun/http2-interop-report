@@ -173,6 +173,54 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 
     <section title="Interoperability Test Results">
 
+      <section title="Upgrade">
+
+      </section>
+
+      <section title="Framing">
+
+      </section>
+
+      <section title="Flow Control">
+
+      </section>
+
+      <section title="Streams and Multiplexing">
+
+      </section>
+
+      <section title="Header Compression">
+
+      </section>
+
+      <section title="Connection Management">
+
+      </section>
+
+      <section title="Stream Prioritization">
+
+      </section>
+
+      <section title="Authentication">
+
+      </section>
+
+      <section title="Server Push">
+
+      </section>
+
+      <section title="TLS Negotiation">
+
+      </section>
+
+      <section title="TLS Cipher Suite">
+
+      </section>
+
+      <section title="Opportunistic Encryption">
+      </section>
+      <section title="Alternative Services">
+      </section>
     </section>
 
     <section title="Security Considerations">
