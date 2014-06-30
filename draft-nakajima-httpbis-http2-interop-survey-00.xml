@@ -97,7 +97,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
         <ttcol align="left">Roles</ttcol>
         <c>nghttp2</c><c>1039dc59ea0fda5ef4296aebd72a01233579841f</c><c>client,server,intermediary</c>
         <postamble>Data from https://github.com/http2/http2-spec/wiki/Implementations</postamble>
-    </texttable>
+      </texttable>
 
     </section>
 
@@ -148,9 +148,16 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 
       </section>
 
-      <section title="Use of TLS">
+      <section title="TLS Cipher Suite">
 
       </section>
+
+      <section title="Opportunistic Encryption">
+      </section>
+      <section title="Alternative Services">
+      </section>
+
+
 
     </section>
 

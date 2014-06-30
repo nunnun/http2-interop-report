@@ -75,10 +75,12 @@ Table of Contents
      4.9.  SSL Negotiation . . . . . . . . . . . . . . . . . . . . .   3
      4.10. Proxies . . . . . . . . . . . . . . . . . . . . . . . . .   3
      4.11. Server Push . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.12. Use of TLS  . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.12. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   3
+     4.13. Opportunistic Encryption  . . . . . . . . . . . . . . . .   3
+     4.14. Alternative Services  . . . . . . . . . . . . . . . . . .   3
    5.  Interoperability Test Results . . . . . . . . . . . . . . . .   3
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
-   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
    8.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   4
    9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
@@ -102,8 +104,6 @@ Table of Contents
    test.  Each implementation has been classified according to the roles
    "client", "server", "intermediary" which are defined in [RFC7230].
    Table 1 shows name, version and roles of tested implementations.
-
-
 
 
 
@@ -149,17 +149,17 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 4.11.  Server Push
 
-4.12.  Use of TLS
+4.12.  TLS Cipher Suite
+
+4.13.  Opportunistic Encryption
+
+4.14.  Alternative Services
 
 5.  Interoperability Test Results
 
 6.  Security Considerations
 
    [TBD]
-
-7.  IANA Considerations
-
-   This document makes no request to IANA.
 
 
 
@@ -169,6 +169,10 @@ Nakajima                 Expires January 1, 2015                [Page 3]
 
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
+
+7.  IANA Considerations
+
+   This document makes no request to IANA.
 
 8.  Contributors
 
@@ -215,16 +219,16 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
    [http2-go]
               "https://github.com/Jxck/http2", .
 
-   [http2-katana]
-              Microsoft Open Technologies, Inc.,
-              "https://github.com/MSOpenTech/http2-katana", .
-
 
 
 Nakajima                 Expires January 1, 2015                [Page 4]
 
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
+
+   [http2-katana]
+              Microsoft Open Technologies, Inc.,
+              "https://github.com/MSOpenTech/http2-katana", .
 
    [iij-http2]
               Internet Initiative Japan Inc.,
@@ -262,10 +266,6 @@ Author's Address
 
    Phone: +81466493424
    EMail: hiro@awa.sfc.keio.ac.jp
-
-
-
-
 
 
 
