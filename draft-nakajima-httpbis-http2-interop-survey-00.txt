@@ -127,7 +127,7 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
            | [Twitter]           | client,server              |
            | [http2-go]          | client,server              |
            | [OkHttp2]           | client                     |
-           | [mruby-http2]       | client,server,intermediary |
+           | [mruby-http2]       | client,server              |
            | [curl]              | client                     |
            | [cl-http2-protocol] | client,server              |
            | [Netty]             | client,server              |

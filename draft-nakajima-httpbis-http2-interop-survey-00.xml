@@ -104,7 +104,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
         <c><xref target="Twitter" /></c><c>client,server</c>
         <c><xref target="http2-go" /></c><c>client,server</c>
         <c><xref target="OkHttp2" /></c><c>client</c>
-        <c><xref target="mruby-http2" /></c><c>client,server,intermediary</c>
+        <c><xref target="mruby-http2" /></c><c>client,server</c>
         <c><xref target="curl" /></c><c>client</c>
         <c><xref target="cl-http2-protocol" /></c><c>client,server</c>
         <c><xref target="Netty" /></c><c>client,server</c>
