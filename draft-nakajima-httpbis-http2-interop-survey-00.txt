@@ -65,7 +65,7 @@ Table of Contents
    3.  Interoperability Test Target  . . . . . . . . . . . . . . . .   3
    4.  Interoperability Test Area  . . . . . . . . . . . . . . . . .   3
      4.1.  Upgrade . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.2.  Framing . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.2.  Framing . . . . . . . . . . . . . . . . . . . . . . . . .   4
      4.3.  Flow Control  . . . . . . . . . . . . . . . . . . . . . .   4
      4.4.  Streams and Multiplexing  . . . . . . . . . . . . . . . .   4
      4.5.  Header Compression  . . . . . . . . . . . . . . . . . . .   4
@@ -87,7 +87,7 @@ Table of Contents
      5.7.  Stream Prioritization . . . . . . . . . . . . . . . . . .   4
      5.8.  Authentication  . . . . . . . . . . . . . . . . . . . . .   4
      5.9.  Server Push . . . . . . . . . . . . . . . . . . . . . . .   4
-     5.10. TLS Negotiation . . . . . . . . . . . . . . . . . . . . .   4
+     5.10. TLS Negotiation . . . . . . . . . . . . . . . . . . . . .   5
      5.11. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   5
      5.12. Opportunistic Encryption  . . . . . . . . . . . . . . . .   5
      5.13. Alternative Services  . . . . . . . . . . . . . . . . . .   5
@@ -156,7 +156,7 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 4.1.  Upgrade
 
-4.2.  Framing
+   aaa
 
 
 
@@ -169,6 +169,8 @@ Nakajima                 Expires January 1, 2015                [Page 3]
 
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
+
+4.2.  Framing
 
 4.3.  Flow Control
 
@@ -212,8 +214,6 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 5.9.  Server Push
 
-5.10.  TLS Negotiation
-
 
 
 
@@ -225,6 +225,8 @@ Nakajima                 Expires January 1, 2015                [Page 4]
 
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
+
+5.10.  TLS Negotiation
 
 5.11.  TLS Cipher Suite
 
@@ -270,8 +272,6 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
    [AkamaiGhost]
               Akamai Technologies, Inc., "https://github.com/http2/
               http2-spec/wiki/Akamaighost", .
-
-
 
 
 

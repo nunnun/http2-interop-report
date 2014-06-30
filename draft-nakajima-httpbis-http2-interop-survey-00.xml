@@ -24,7 +24,6 @@ Enter the full document title and an abbreviated version
 
     <title abbrev="HTTP/2 Interoperability Survey">HTTP/2 Interoperability Survey</title>
 
-
     <author fullname="Hirotaka Nakajima" initials="H." 
       surname="Nakajima">
       <organization>Keio University, W3C</organization>
@@ -32,29 +31,18 @@ Enter the full document title and an abbreviated version
       <address>
         <postal>
           <street>5322 Endo</street>
-
           <city>Fujisawa, Kanagawa</city>
-
           <country>Japan</country>
         </postal>
-
         <phone>+81466493424</phone>
-
         <email>hiro@awa.sfc.keio.ac.jp</email>
       </address>
     </author>
 
-    <!-- month and day will be generated automatically by XML2RFC; 
-be sure the year is current.-->
-
-    <date  year="" />
-
-    <!-- IETF area is optional -->
+    <date year="" />
 
     <area>Applications</area>
-
     <workgroup>HTTPbis</workgroup>
-
     <keyword>HTTP/2</keyword>
 
     <abstract>
@@ -119,6 +107,10 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 
 
       <section title="Upgrade">
+
+        <t>
+        aaa
+        </t>
 
       </section>
 
