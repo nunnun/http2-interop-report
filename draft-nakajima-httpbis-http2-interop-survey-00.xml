@@ -1,26 +1,5 @@
-<?txt version="1.0" encoding="US-ASCII"?>
-<!-- change the "txt" on the previous line to "xml" to make this a valid XML2RFC template --> 
-<!-- this is version 5 of this xml2rfc template -->
-<!--
-    DOCTYPE processing
-
-To use this XML template, the rfc2629.dtd from the xml2rfc distribution should 
-be in the local directory. The xml2rfc distribution is available from 
-http://xml.resource.org/
-
- The ENTITY clauses create an include of the named XML files, which
-contains references written in xml2rfc format.
-
- XML2RFC offers an include feature described in the XML2RFC README
-  file.  That syntax, however, contradicts the DTD requirements to
-  have <reference> elements within the <references> element, so an 
-  XML parser is likely to find your XML file invalid.  It may be
-  possible that XML2RFC will change their DTD so that the XML file
-  remains valid when their style of include is used.
-
-Some editors, such as XXE, resolve the ENTITY clauses before displaying the 
-document to be edited.
--->
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lib/rfc2629.xslt"?>
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
 <!ENTITY rfc2119 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
 <!ENTITY rfc2223 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2223.xml">
@@ -31,37 +10,19 @@ document to be edited.
 <!ENTITY rfc3410 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.3410.xml">
 <!ENTITY rfc4181 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4181.xml">
 ]>
-<?rfc toc="yes"?>
-<?rfc symrefs="yes"?>
+<?rfc toc="yes" ?>
+<?rfc symrefs="yes" ?>
+<?rfc sortrefs="yes" ?>
 <?rfc compact="yes"?>
-<?rfc subcompact="no"?>
-<?rfc strict="no"?>
-<?rfc rfcedstyle="yes"?>
-<?rfc comments="yes"?>
+<?rfc subcompact="no" ?>
+<?rfc linkmailto="no" ?>
+<?rfc editing="no" ?>
+<?rfc comments="yes" ?>
 <?rfc inline="yes"?>
+<?rfc rfcedstyle="yes"?>
+<?rfc-ext allow-markup-in-artwork="yes" ?>
 
-<!-- Document  section 
-
-Specify the category attribute per RFC2026 
-options are info, std, bcp, or exp. 
-
-docname is the name of the output document. This is optional;
-the default is to use the base portion of the XML filename. 
-
-For Internet-drafts, indicate which intellectual property notice 
-to use per the rules of RFC3978. The value (as of this template) can be:
-    trust200902 -
-    noModificationTrust200902 -
-    noDerivativesTrust200902 -
-    pre5378Trust200902 -
-
- The Intellectual Property section will be generated automatically by
-  XML2RFC, based on the ipr attribute in the rfc element.
-
-If this document obsoletes an RFC, specify the RFC in the "obsoletes" attribute
-If this document updates an RFC, specify the RFC in the "updates" attribute
--->
-<rfc category="info" docName="draft-nakajima-httpbis-http2-interop-survey-00" ipr="trust200902">
+<rfc category="info" docName="draft-nakajima-httpbis-http2-interop-survey-00" ipr="trust200902" >
   <front>
     <!--
 Enter the full document title and an abbreviated version
@@ -70,14 +31,9 @@ Enter the full document title and an abbreviated version
 
     <title abbrev="HTTP/2 Interoperability Survey">HTTP/2 Interoperability Survey</title>
 
-    <!-- copy the author block as many times as needed, one for each author.-->
 
-    <!-- If the author is acting as editor, use the <role=editor> attribute-->
-
-    <!-- see RFC2223 for guidelines regarding author names -->
-
-    <author fullname="Hirotaka Nakajima" initials="H" 
-            surname="Nakajima">
+    <author fullname="Hirotaka Nakajima" initials="H." 
+      surname="Nakajima">
       <organization>Keio University</organization>
 
       <address>
@@ -108,41 +64,48 @@ be sure the year is current.-->
 
     <keyword>HTTP/2</keyword>
 
-    <!--add additional keywords here for IETF website search engine -->
-<abstract>
+    <abstract>
 
-  <t>This document provides a survey of </t>
- 
-</abstract>
- 
-   </front>
+      <!--
+HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。プロトコルのDeployにおいて相互運用性はとても重要であり、HTTP/1.1 Pipeliningのように仕組みは整っていてもきちんと実装されていないor中間者が対応していないなどの問題でdeployに失敗してしまった場合、新しいプロトコルの効果が減ってしまう。
+このドキュメントではHTTP/2.0 Testで提案されたテスト項目を各種実装間で動作するかを検証し、検証の結果並びに問題点について議論を行い、
+・実装を助ける
+・Interopから見つかった問題点を解決することで仕様を向上させる
+・Deploymentを助ける
+をゴールとする。
+           -->
+      <t>This document provides a survey of HTTP/2 (<xref target="HTTP2" />) and HPACK (<xref target="HPACK" />) interoperability tests. Goals are to help </t>
+
+    </abstract>
+
+  </front>
 
   <middle>
     <section title="Introduction">
 
-  <t>[TBD]</t>
+      <t>[TBD]</t>
     </section>
 
 
     <section title="Requirements">
 
       <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-      "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
-      document are to be interpreted as described in BCP 14, RFC 2119 <xref
-      target="RFC2119"></xref>.</t>
-      
-      </section>
+        "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+        document are to be interpreted as described in BCP 14, RFC 2119 <xref
+          target="RFC2119"></xref>.</t>
+
+    </section>
 
 
     <section title="Overview">
 
-      </section>
+    </section>
 
 
 
     <section title="Security Considerations">
 
-<t>[TBD]</t>
+      <t>[TBD]</t>
 
 
     </section>
@@ -160,75 +123,68 @@ be sure the year is current.-->
 
     <references title="Normative References">
 
-      &rfc2119;
+      <reference anchor="RFC2119">
+        <front>
+          <title>
+            Key words for use in RFCs to Indicate Requirement Levels
+          </title>
+          <author initials="S." surname="Bradner" fullname="Scott Bradner">
+            <organization>Harvard University</organization>
+            <address><email>sob@harvard.edu</email></address>
+          </author>
+          <date month="March" year="1997"/>
+        </front>
+        <seriesInfo name="BCP" value="14"/>
+        <seriesInfo name="RFC" value="2119"/>
+      </reference>
 
 
+      <reference anchor="HTTP2">
+        <front>
+          <title>Hypertext Transfer Protocol version 2</title>
+          <author initials="M." surname="Belshe" fullname="Mike Belshe"></author>
+          <author initials="R." surname="Peon" fullname="Roberto Peon"></author>
+          <author initials="M." surname="Thomson" fullname="Martin Thomson" role="editor"></author>
+
+          <date year="2014" />
+        </front>
+        <seriesInfo name="Internet-Draft" value="draft-ietf-httpbis-http2-latest" />
+      </reference>
+      <reference anchor="HPACK">
+        <front>
+          <title>HPACK - Header Compression for HTTP/2</title>
+          <author initials="H." surname="Ruellan" fullname="Herve Ruellan"/>
+          <author initials="R." surname="Peon" fullname="Roberto Peon"/>
+          <date month="June" year="2014" />
+        </front>
+        <seriesInfo name="Internet-Draft" value="draft-ietf-httpbis-header-compression-08" />
+      </reference>
     </references>
-<!-- 
+
     <references title="Informative References">
 
-      &rfc2223;
-      &rfc3410;
-
-     &rfc2629;
-
-       &rfc4181;
+      <reference anchor="RFC7230">
+        <front>
+          <title>
+            Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</title>
+          <author fullname="Roy T. Fielding" initials="R." role="editor" surname="Fielding">
+            <organization abbrev="Adobe">Adobe Systems Incorporated</organization>
+            <address><email>fielding@gbiv.com</email></address>
+          </author>
+          <author fullname="Julian F. Reschke" initials="J. F." role="editor" surname="Reschke">
+            <organization abbrev="greenbytes">greenbytes GmbH</organization>
+            <address><email>julian.reschke@greenbytes.de</email></address>
+          </author>
+          <date month="June" year="2014" />
+        </front>
+        <seriesInfo name="RFC" value="7230" />
+      </reference>
 
     </references>
--->
-<!--    
-    <references title="URL References">
-<reference anchor="idguidelines">
-	<front>
-		<title>http://www.ietf.org/ietf/1id-guidelines.txt</title>
-		<author>
-			<organization>IETF Internet Drafts editor</organization>
-		</author>
-		<date year=""></date>
-	</front>
-</reference>
-<reference anchor="idnits">
-	<front>
-		<title>http://www.ietf.org/ID-Checklist.html</title>
-		<author>
-			<organization>IETF Internet Drafts editor</organization>
-		</author>
-		<date year=""></date>
-	</front>
-</reference>
-<reference anchor="xml2rfc">
-	<front>
-		<title>http://xml.resource.org</title>
-		<author>
-			<organization>XML2RFC tools and documentation</organization>
-		</author>
-		<date year=""></date>
-	</front>
-</reference>								
-<reference anchor="ops">
-	<front>
-		<title>http://www.ops.ietf.org</title>
-		<author>
-			<organization>the IETF OPS Area</organization>
-		</author>
-		<date year=""></date>
-	</front>
-</reference>		
-<reference anchor="ietf">
-	<front>
-		<title>http://tools.ietf.org</title>
-		<author>
-			<organization>IETF Tools Team</organization>
-		</author>
-		<date year=""></date>
-	</front>
-</reference>						
-     
-    </references>
-    -->
+
     <!--
 <section anchor="appendix" title="Appendix A">
-	<t>You can add appendices just as regular sections, the only
+  <t>You can add appendices just as regular sections, the only
 difference is that they go under "back" element, and get letters 
 instead of numbers</t>
 </section>
@@ -238,3 +194,6 @@ instead of numbers</t>
 
   </back>
 </rfc>
+<!--
+       vim:et:tw=100:sw=2:
+  -->

@@ -13,7 +13,8 @@ Expires: January 1, 2015
 
 Abstract
 
-   This document provides a survey of
+   This document provides a survey of HTTP/2 ([HTTP2]) and HPACK
+   ([HPACK]) interoperability tests.  Goals are to help
 
 Status of This Memo
 
@@ -52,7 +53,6 @@ Copyright Notice
 
 
 
-
 Nakajima                 Expires January 1, 2015                [Page 1]
 
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
@@ -66,7 +66,9 @@ Table of Contents
    4.  Security Considerations . . . . . . . . . . . . . . . . . . .   2
    5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   2
    6.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   7.  Normative References  . . . . . . . . . . . . . . . . . . . .   2
+   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   2
+     7.1.  Normative References  . . . . . . . . . . . . . . . . . .   2
+     7.2.  Informative References  . . . . . . . . . . . . . . . . .   3
 
 1.  Introduction
 
@@ -91,10 +93,35 @@ Table of Contents
 
 6.  Contributors
 
-7.  Normative References
+7.  References
+
+7.1.  Normative References
+
+   [HPACK]    Ruellan, H. and R. Peon, "HPACK - Header Compression for
+              HTTP/2", draft-ietf-httpbis-header-compression-08 (work in
+              progress), June 2014.
+
+   [HTTP2]    Belshe, M., Peon, R., and M. Thomson, Ed., "Hypertext
+              Transfer Protocol version 2", draft-ietf-httpbis-
+              http2-latest (work in progress), 2014.
+
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 2]
+
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
+
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997.
+
+7.2.  Informative References
+
+   [RFC7230]  Fielding, R., Ed. and J. Reschke, Ed., "Hypertext Transfer
+              Protocol (HTTP/1.1): Message Syntax and Routing", RFC
+              7230, June 2014.
 
 Author's Address
 
@@ -109,4 +136,33 @@ Author's Address
 
 
 
-Nakajima                 Expires January 1, 2015                [Page 2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 3]
