@@ -2,18 +2,18 @@
 
 
 
-Internet Engineering Task Force                              H. Nakajima
+HTTPbis                                                      H. Nakajima
 Internet-Draft                                           Keio University
-Intended status: Informational                             June 29, 2014
-Expires: December 31, 2014
+Intended status: Informational                             June 30, 2014
+Expires: January 1, 2015
 
 
-                  http/2 Inter-Operability Test Report
-                   draft-nakajima-httpbis-interop-00
+                     HTTP/2 Interoperability Survey
+             draft-nakajima-httpbis-http2-interop-survey-00
 
 Abstract
 
-   [TBD]
+   This document provides a survey of
 
 Status of This Memo
 
@@ -30,7 +30,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on December 31, 2014.
+   This Internet-Draft will expire on January 1, 2015.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Nakajima                Expires December 31, 2014               [Page 1]
+Nakajima                 Expires January 1, 2015                [Page 1]
 
-Internet-Draft    http/2 Inter-Operability Test Report         June 2014
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 
 Table of Contents
@@ -98,15 +98,15 @@ Table of Contents
 
 Author's Address
 
-   Editor name
+   Hirotaka Nakajima
    Keio University
    5322 Endo
    Fujisawa, Kanagawa
    Japan
 
-   Phone: +81466
+   Phone: +81466493424
    EMail: hiro@w3.org
 
 
 
-Nakajima                Expires December 31, 2014               [Page 2]
+Nakajima                 Expires January 1, 2015                [Page 2]

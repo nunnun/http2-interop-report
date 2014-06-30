@@ -61,14 +61,14 @@ to use per the rules of RFC3978. The value (as of this template) can be:
 If this document obsoletes an RFC, specify the RFC in the "obsoletes" attribute
 If this document updates an RFC, specify the RFC in the "updates" attribute
 -->
-<rfc category="info" docName="draft-nakajima-httpbis-interop-00" ipr="trust200902">
+<rfc category="info" docName="draft-nakajima-httpbis-http2-interop-survey-00" ipr="trust200902">
   <front>
     <!--
 Enter the full document title and an abbreviated version
   to use in the page header.
 -->
 
-    <title abbrev="http/2 Inter-Operability Test Report">http/2 Inter-Operability Test Report</title>
+    <title abbrev="HTTP/2 Interoperability Survey">HTTP/2 Interoperability Survey</title>
 
     <!-- copy the author block as many times as needed, one for each author.-->
 
@@ -76,7 +76,7 @@ Enter the full document title and an abbreviated version
 
     <!-- see RFC2223 for guidelines regarding author names -->
 
-    <author fullname="Editor name" initials="H" 
+    <author fullname="Hirotaka Nakajima" initials="H" 
             surname="Nakajima">
       <organization>Keio University</organization>
 
@@ -89,7 +89,7 @@ Enter the full document title and an abbreviated version
           <country>Japan</country>
         </postal>
 
-        <phone>+81466</phone>
+        <phone>+81466493424</phone>
 
         <email>hiro@w3.org</email>
       </address>
@@ -102,45 +102,16 @@ be sure the year is current.-->
 
     <!-- IETF area is optional -->
 
-    <area>Application Area</area>
+    <area>Applications</area>
 
-    <!--WG name at the upperleft corner of the doc, 
-IETF is fine for non-WG IETF submissions -->
+    <workgroup>HTTPbis</workgroup>
 
-    <workgroup>Internet Engineering Task Force</workgroup>
-
-    <keyword>Network Management</keyword>
-
-    <keyword>Management Information Base</keyword>
-
-    <keyword>MIB</keyword>
-
-    <keyword>SMIv2</keyword>
+    <keyword>HTTP/2</keyword>
 
     <!--add additional keywords here for IETF website search engine -->
 <abstract>
 
-  <t>[TBD]</t>
-
-  <!--  
-<t> <cref>This template is for authors of IETF specifications containing MIB
-  modules.  This template can be used as a starting point to produce
-  specifications that comply with the Operations &amp; Management Area
-  guidelines for MIB module internet drafts. Throughout the template, the marker "[TEMPLATE TODO]" is used as a placeholder to indicate an
-  element or text that requires replacement or removal. All the places with [TEMPLATE TODO] markers 
-  should  be replaced or removed before the document is submitted.</cref></t>
-  
-      <t>This memo defines a portion of the Management Information Base (MIB)
-      for use with network management protocols. In particular it defines
-      objects for managing [TEMPLATE TODO].</t>
-      
-
- <t><cref>[TEMPLATE TODO]: describe what functionality will be managed using this MIB
- module. It can be good to mention the protocol being managed, and
- whether there is a particular aspect of the protocol to be managed, or a
- particular goal of the module. But keep it brief. Remember, don't put any citations 
- in the abstract, and expand your  acronyms. </cref></t>
--->
+  <t>This document provides a survey of </t>
  
 </abstract>
  
@@ -148,18 +119,8 @@ IETF is fine for non-WG IETF submissions -->
 
   <middle>
     <section title="Introduction">
-      <!--You can echo the abstract in the Introduction, providing citations here, 
-but you should provide more than just the abstract. -->
 
   <t>[TBD]</t>
-    <!--
- <t><cref>[TEMPLATE TODO]: describe what functionality will be managed using this MIB
- module. Include citations for protocol specifications, architectures, related MIB modules, and protocol-specific
-          management requirements. Provide an overview of why a MIB module is appropriate for this protocol,  whether there is a 
-          particular aspect of the protocol to be managed, and how the module is expected to be used to 
-          achieve particular goals. Highlight anything 'different' about the module. For example, 
-          a read-only MIB module.</cref></t>
--->
     </section>
 
 
@@ -172,18 +133,9 @@ but you should provide more than just the abstract. -->
       
       </section>
 
-    <!-- ********************************************* -->
 
     <section title="Overview">
 
-      <!--     <t><cref>[TEMPLATE TODO] The narrative part should include an overview section that
-   describes the scope and field of application of the MIB modules
-   defined by the specification.  See RFC4181 section 3.2 for a
-   discussion of the Narrative section.
-</cref></t>
-
-      <t></t>
--->
       </section>
 
 
@@ -200,55 +152,16 @@ but you should provide more than just the abstract. -->
       <t>This document makes no request to IANA.</t>
     </section>
 
-    <!-- The Author's Addresses section will be generated automatically by XML2RFC 
-    from the front information. -->
-
     <section title="Contributors">
-      <!--
-
-      <t><cref>[TEMPLATE TODO] This optional section can be used to mention contributors to your internet draft.</cref></t>
-      -->
     </section>
   </middle>
 
   <back>
 
-    <!-- References Section -->
-
-    <!-- Section 4.7f of [RFC2223bis] specifies the requirements for the
-   references sections.  In particular, there MUST be separate lists of
-   normative and informative references, each in a separate section.
-   The style SHOULD follow that of recently published RFCs.
-
-   The standard MIB boilerplate available at
-  the OPS Area web site includes lists of
-   normative and informative references that MUST appear in all IETF
-   specifications that contain MIB modules.  If items from other MIB
-   modules appear in an IMPORTS statement in the Definitions section,
-   then the specifications containing those MIB modules MUST be included
-   in the list of normative references.  When items are imported from an
-   IANA-maintained MIB module the corresponding normative reference
-   SHALL reference the on-line version of that MIB module.  It is the
-   policy of the RFC Editor that all references must be cited in the
-   text;  such citations MUST appear in the overview section where
-   documents containing imported definitions (other than those already
-   mentioned in the MIB boilerplate) are required to be mentioned (cf.
-   Section 3.2).
-
-In general, each normative reference SHOULD reference the most recent
-version of the specification in question.
--->
     <references title="Normative References">
 
       &rfc2119;
 
-<!--
-      &rfc2578;
-
-      &rfc2579;
-
-      &rfc2580;
--->
 
     </references>
 <!-- 
@@ -323,9 +236,5 @@ instead of numbers</t>
 
 
 
-    <!--
-$Id: mib-doc-template.xml,v 1.5 2008/04/08 17:39:56 H73653 Exp $
-
-  -->
   </back>
 </rfc>
