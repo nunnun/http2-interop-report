@@ -2,13 +2,6 @@
 <?xml-stylesheet type="text/xsl" href="lib/rfc2629.xslt"?>
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
 <!ENTITY rfc2119 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
-<!ENTITY rfc2223 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2223.xml">
-<!ENTITY rfc2578 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2578.xml">
-<!ENTITY rfc2579 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2579.xml">
-<!ENTITY rfc2580 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2580.xml">
-<!ENTITY rfc2629 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2629.xml">
-<!ENTITY rfc3410 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.3410.xml">
-<!ENTITY rfc4181 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4181.xml">
 ]>
 <?rfc toc="yes" ?>
 <?rfc symrefs="yes" ?>
@@ -34,7 +27,7 @@ Enter the full document title and an abbreviated version
 
     <author fullname="Hirotaka Nakajima" initials="H." 
       surname="Nakajima">
-      <organization>Keio University</organization>
+      <organization>Keio University, W3C</organization>
 
       <address>
         <postal>
@@ -47,7 +40,7 @@ Enter the full document title and an abbreviated version
 
         <phone>+81466493424</phone>
 
-        <email>hiro@w3.org</email>
+        <email>hiro@awa.sfc.keio.ac.jp</email>
       </address>
     </author>
 
@@ -74,7 +67,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 ・Deploymentを助ける
 をゴールとする。
            -->
-      <t>This document provides a survey of HTTP/2 (<xref target="HTTP2" />) and HPACK (<xref target="HPACK" />) interoperability tests. Goals are to help </t>
+      <t>This document provides a survey of HTTP/2 (<xref target="I-D.ietf-httpbis-http2" />) and HPACK (<xref target="I-D.ietf-httpbis-header-compression" />) interoperability tests. Goals are to help </t>
 
     </abstract>
 
@@ -96,18 +89,35 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 
     </section>
 
+    <section title="Interoperability Test Target">
+      <t>The following implementaions have been tested for interoperability test. Each implementation has been classified according to the roles "client", "server", "intermediary" which are defined in <xref target="RFC7230"/>. Implementation which has multiple roles is listed in each role.</t>     
+      <section title="Surveyed Implementations">
+        <t>
+          <list style="hanging">
+            <t hangText="nghttp2"><xref target="nghttp2" /></t>
+            <t>http2-katana</t>
+            <t>node-http2</t>
+            <t>Mozilla</t>
+            <t>Chromium</t>
+            <t>http2-go</t>
+            <t>mruby-http2</t>
+            <t>curl and libcurl</t>
+            <t>cl-http2-protocol</t>
+            <t>Netty</t>
+            <t>Jetty</t>
+          </list>
+        </t>
+      </section>
+      <section title="Client">
+      </section>
+      <section title="Server">
+      </section>
+      <section title="Intermediary">
+      </section>
+    </section>
 
     <section title="Interoperability Test Area">
 
-      <section title="Target Implementations">
-        <section title="Client">
-        </section>
-        <section title="Server">
-        </section>
-        <section title="Intermediary">
-        </section>
-
-      </section>
 
       <section title="Upgrade">
 
@@ -183,63 +193,147 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 
     <references title="Normative References">
 
-      <reference anchor="RFC2119">
-        <front>
-          <title>
-            Key words for use in RFCs to Indicate Requirement Levels
-          </title>
-          <author initials="S." surname="Bradner" fullname="Scott Bradner">
-            <organization>Harvard University</organization>
-            <address><email>sob@harvard.edu</email></address>
-          </author>
-          <date month="March" year="1997"/>
-        </front>
-        <seriesInfo name="BCP" value="14"/>
-        <seriesInfo name="RFC" value="2119"/>
-      </reference>
 
+      <?rfc include="reference.RFC.2119.xml"?>
 
-      <reference anchor="HTTP2">
-        <front>
-          <title>Hypertext Transfer Protocol version 2</title>
-          <author initials="M." surname="Belshe" fullname="Mike Belshe"></author>
-          <author initials="R." surname="Peon" fullname="Roberto Peon"></author>
-          <author initials="M." surname="Thomson" fullname="Martin Thomson" role="editor"></author>
-
-          <date year="2014" />
-        </front>
-        <seriesInfo name="Internet-Draft" value="draft-ietf-httpbis-http2-latest" />
-      </reference>
-      <reference anchor="HPACK">
-        <front>
-          <title>HPACK - Header Compression for HTTP/2</title>
-          <author initials="H." surname="Ruellan" fullname="Herve Ruellan"/>
-          <author initials="R." surname="Peon" fullname="Roberto Peon"/>
-          <date month="June" year="2014" />
-        </front>
-        <seriesInfo name="Internet-Draft" value="draft-ietf-httpbis-header-compression-08" />
-      </reference>
+      <?rfc include="reference.I-D.ietf-httpbis-http2.xml" ?>
+      <?rfc include="reference.I-D.ietf-httpbis-header-compression.xml" symrefs="no" ?>
     </references>
 
     <references title="Informative References">
 
-      <reference anchor="RFC7230">
-        <front>
-          <title>
-            Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</title>
-          <author fullname="Roy T. Fielding" initials="R." role="editor" surname="Fielding">
-            <organization abbrev="Adobe">Adobe Systems Incorporated</organization>
-            <address><email>fielding@gbiv.com</email></address>
-          </author>
-          <author fullname="Julian F. Reschke" initials="J. F." role="editor" surname="Reschke">
-            <organization abbrev="greenbytes">greenbytes GmbH</organization>
-            <address><email>julian.reschke@greenbytes.de</email></address>
-          </author>
-          <date month="June" year="2014" />
-        </front>
-        <seriesInfo name="RFC" value="7230" />
-      </reference>
+      <?rfc include="reference.RFC.7230.xml"?>
 
+    </references>
+
+    <references title="URL References">
+      <reference anchor="nghttp2">
+        <front>
+          <title>https://nghttp2.org/</title>
+          <author fullname="Tatsuhiro Tsujikawa" initials="T." surname="Tsujikawa" />
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="http2-katana">
+        <front>
+          <title>https://github.com/MSOpenTech/http2-katana</title>
+          <author>
+            <organization>Microsoft Open Technologies, Inc.</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="node-http2">
+        <front>
+          <title>https://github.com/molnarg/node-http2</title>
+          <author fullname="Nick Hurley" initials="N." surname="Hurley" />
+          <author fullname="Mike Belshe" initials="M." surname="Belshe" />
+          <author fullname="Yoshihiro Iwanaga" initials="Y." surname="Iwanaga" />
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="mozilla">
+        <front>
+          <title>https://wiki.mozilla.org/Networking/http2</title>
+          <author>
+            <organization>Mozilla Foundation</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="iij-http2">
+        <front>
+          <title>https://github.com/shigeki/interop-iij-http2</title>
+          <author>
+            <organization>Internet Initiative Japan Inc.</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="akamaighost">
+        <front>
+          <title>https://github.com/http2/http2-spec/wiki/Akamaighost</title>
+          <author>
+            <organization>Akamai Technologies, Inc.</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="chromium">
+        <front>
+          <title>https://sites.google.com/a/chromium.org/dev/spdy/http2</title>
+          <author>
+            <organization>The Chromium Projects</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="twitter">
+        <front>
+          <title>https://twitter.com</title>
+          <author>
+            <organization>Twitter Inc.</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="http2-go">
+        <front>
+          <title>https://github.com/Jxck/http2</title>
+          <author fullname="Jxck" />
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="okhttp">
+        <front>
+          <title>https://github.com/square/okhttp</title>
+          <author>
+            <organization>Square, Inc.</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="mruby-http2">
+        <front>
+          <title>https://github.com/matsumoto-r/mruby-http2</title>
+          <author fullname="Ryosuke Matsumoto" initials="R." surname="Matsumoto" />
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="curl">
+        <front>
+          <title>http://curl.haxx.se/</title>
+          <author fullname="Daniel Stenberg" initials="D." surname="Stenberg" />
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="cl-http2-protocol">
+        <front>
+          <title>https://github.com/akamai/cl-http2-protocol</title>
+          <author>
+            <organization>Akamai Technologies, Inc.</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="netty">
+        <front>
+          <title>http://netty.io/</title>
+          <author>
+            <organization>The Netty project</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
+      <reference anchor="jetty">
+        <front>
+          <title>http://git.eclipse.org/c/jetty/org.eclipse.jetty.project.git/tree/?h=jetty-http2</title>
+          <author>
+            <organization>The Eclipse Foundation</organization>
+          </author>
+          <date year=""></date>
+        </front>
+      </reference>
     </references>
 
     <!--
