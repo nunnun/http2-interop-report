@@ -67,7 +67,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 ・Deploymentを助ける
 をゴールとする。
            -->
-      <t>This document provides a survey of HTTP/2 (<xref target="I-D.ietf-httpbis-http2" />) and HPACK (<xref target="I-D.ietf-httpbis-header-compression" />) interoperability tests. Goals are to help </t>
+      <t>This document provides a survey of <xref target="I-D.ietf-httpbis-http2">HTTP/2</xref> and <xref target="I-D.ietf-httpbis-header-compression">HPACK</xref> implementations and interoperability tests. Goals are to help </t>
 
     </abstract>
 
@@ -90,30 +90,15 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
     </section>
 
     <section title="Interoperability Test Target">
-      <t>The following implementaions have been tested for interoperability test. Each implementation has been classified according to the roles "client", "server", "intermediary" which are defined in <xref target="RFC7230"/>. Implementation which has multiple roles is listed in each role.</t>     
-      <section title="Surveyed Implementations">
-        <t>
-          <list style="hanging">
-            <t hangText="nghttp2"><xref target="nghttp2" /></t>
-            <t>http2-katana</t>
-            <t>node-http2</t>
-            <t>Mozilla</t>
-            <t>Chromium</t>
-            <t>http2-go</t>
-            <t>mruby-http2</t>
-            <t>curl and libcurl</t>
-            <t>cl-http2-protocol</t>
-            <t>Netty</t>
-            <t>Jetty</t>
-          </list>
-        </t>
-      </section>
-      <section title="Client">
-      </section>
-      <section title="Server">
-      </section>
-      <section title="Intermediary">
-      </section>
+      <t>The following implementaions have been tested for interoperability test. Each implementation has been classified according to the roles "client", "server", "intermediary" which are defined in <xref target="RFC7230"/>. <xref target="implementaion_table"/> shows name, version and roles of tested implementations.</t>
+      <texttable anchor="implementaion_table" title="Surveyed Implementations">
+        <ttcol align="left">Name</ttcol>
+        <ttcol align="left">Version</ttcol>
+        <ttcol align="left">Roles</ttcol>
+        <c>nghttp2</c><c>1039dc59ea0fda5ef4296aebd72a01233579841f</c><c>client,server,intermediary</c>
+        <postamble>Data from https://github.com/http2/http2-spec/wiki/Implementations</postamble>
+    </texttable>
+
     </section>
 
     <section title="Interoperability Test Area">

@@ -13,9 +13,9 @@ Expires: January 1, 2015
 
 Abstract
 
-   This document provides a survey of HTTP/2 ([I-D.ietf-httpbis-http2])
-   and HPACK ([I-D.ietf-httpbis-header-compression]) interoperability
-   tests.  Goals are to help
+   This document provides a survey of HTTP/2 [I-D.ietf-httpbis-http2]
+   and HPACK [I-D.ietf-httpbis-header-compression] implementations and
+   interoperability tests.  Goals are to help
 
 Status of This Memo
 
@@ -63,10 +63,6 @@ Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Requirements  . . . . . . . . . . . . . . . . . . . . . . . .   2
    3.  Interoperability Test Target  . . . . . . . . . . . . . . . .   2
-     3.1.  Surveyed Implementations  . . . . . . . . . . . . . . . .   3
-     3.2.  Client  . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     3.3.  Server  . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     3.4.  Intermediary  . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Interoperability Test Area  . . . . . . . . . . . . . . . . .   3
      4.1.  Upgrade . . . . . . . . . . . . . . . . . . . . . . . . .   3
      4.2.  Framing . . . . . . . . . . . . . . . . . . . . . . . . .   3
@@ -74,20 +70,20 @@ Table of Contents
      4.4.  Streams and Multiplexing  . . . . . . . . . . . . . . . .   3
      4.5.  Header Compression  . . . . . . . . . . . . . . . . . . .   3
      4.6.  Connection Management . . . . . . . . . . . . . . . . . .   3
-     4.7.  Stream Prioritization . . . . . . . . . . . . . . . . . .   4
-     4.8.  Authentication  . . . . . . . . . . . . . . . . . . . . .   4
-     4.9.  SSL Negotiation . . . . . . . . . . . . . . . . . . . . .   4
-     4.10. Proxies . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.11. Server Push . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.12. Use of TLS  . . . . . . . . . . . . . . . . . . . . . . .   4
-   5.  Interoperability Test Results . . . . . . . . . . . . . . . .   4
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
-   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
+     4.7.  Stream Prioritization . . . . . . . . . . . . . . . . . .   3
+     4.8.  Authentication  . . . . . . . . . . . . . . . . . . . . .   3
+     4.9.  SSL Negotiation . . . . . . . . . . . . . . . . . . . . .   3
+     4.10. Proxies . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.11. Server Push . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.12. Use of TLS  . . . . . . . . . . . . . . . . . . . . . . .   3
+   5.  Interoperability Test Results . . . . . . . . . . . . . . . .   3
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
    8.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   4
    9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
      9.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
      9.2.  Informative References  . . . . . . . . . . . . . . . . .   4
-     9.3.  URL References  . . . . . . . . . . . . . . . . . . . . .   5
+     9.3.  URL References  . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
 
@@ -105,7 +101,11 @@ Table of Contents
    The following implementaions have been tested for interoperability
    test.  Each implementation has been classified according to the roles
    "client", "server", "intermediary" which are defined in [RFC7230].
-   Implementation which has multiple roles is listed in each role.
+   Table 1 shows name, version and roles of tested implementations.
+
+
+
+
 
 
 
@@ -114,35 +114,16 @@ Nakajima                 Expires January 1, 2015                [Page 2]
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 
-3.1.  Surveyed Implementations
+   +-------+-----------------------------------+-----------------------+
+   | Name  | Version                           | Roles                 |
+   +-------+-----------------------------------+-----------------------+
+   | nghtt | 1039dc59ea0fda5ef4296aebd72a01233 | client,server,interme |
+   | p2    | 579841f                           | diary                 |
+   +-------+-----------------------------------+-----------------------+
 
-   nghttp2  [nghttp2]
+    Data from https://github.com/http2/http2-spec/wiki/Implementations
 
-      http2-katana
-
-      node-http2
-
-      Mozilla
-
-      Chromium
-
-      http2-go
-
-      mruby-http2
-
-      curl and libcurl
-
-      cl-http2-protocol
-
-      Netty
-
-      Jetty
-
-3.2.  Client
-
-3.3.  Server
-
-3.4.  Intermediary
+                     Table 1: Surveyed Implementations
 
 4.  Interoperability Test Area
 
@@ -157,18 +138,6 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 4.5.  Header Compression
 
 4.6.  Connection Management
-
-
-
-
-
-
-
-
-Nakajima                 Expires January 1, 2015                [Page 3]
-
-Internet-Draft       HTTP/2 Interoperability Survey            June 2014
-
 
 4.7.  Stream Prioritization
 
@@ -191,6 +160,15 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 7.  IANA Considerations
 
    This document makes no request to IANA.
+
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 3]
+
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
+
 
 8.  Contributors
 
@@ -217,15 +195,6 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
               (HTTP/1.1): Message Syntax and Routing", RFC 7230, June
               2014.
 
-
-
-
-
-Nakajima                 Expires January 1, 2015                [Page 4]
-
-Internet-Draft       HTTP/2 Interoperability Survey            June 2014
-
-
 9.3.  URL References
 
    [akamaighost]
@@ -250,6 +219,13 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
               Microsoft Open Technologies, Inc.,
               "https://github.com/MSOpenTech/http2-katana", .
 
+
+
+Nakajima                 Expires January 1, 2015                [Page 4]
+
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
+
+
    [iij-http2]
               Internet Initiative Japan Inc.,
               "https://github.com/shigeki/interop-iij-http2", .
@@ -273,14 +249,6 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
               "https://github.com/molnarg/node-http2", .
 
    [okhttp]   Square, Inc., "https://github.com/square/okhttp", .
-
-
-
-
-Nakajima                 Expires January 1, 2015                [Page 5]
-
-Internet-Draft       HTTP/2 Interoperability Survey            June 2014
-
 
    [twitter]  Twitter Inc., "https://twitter.com", .
 
@@ -309,28 +277,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Nakajima                 Expires January 1, 2015                [Page 6]
+Nakajima                 Expires January 1, 2015                [Page 5]
