@@ -72,14 +72,13 @@ Table of Contents
      4.6.  Connection Management . . . . . . . . . . . . . . . . . .   3
      4.7.  Stream Prioritization . . . . . . . . . . . . . . . . . .   3
      4.8.  Authentication  . . . . . . . . . . . . . . . . . . . . .   3
-     4.9.  SSL Negotiation . . . . . . . . . . . . . . . . . . . . .   3
-     4.10. Proxies . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.11. Server Push . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.12. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   3
-     4.13. Opportunistic Encryption  . . . . . . . . . . . . . . . .   3
-     4.14. Alternative Services  . . . . . . . . . . . . . . . . . .   3
-   5.  Interoperability Test Results . . . . . . . . . . . . . . . .   3
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
+     4.9.  Server Push . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.10. TLS Negotiation . . . . . . . . . . . . . . . . . . . . .   4
+     4.11. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   4
+     4.12. Opportunistic Encryption  . . . . . . . . . . . . . . . .   4
+     4.13. Alternative Services  . . . . . . . . . . . . . . . . . .   4
+   5.  Interoperability Test Results . . . . . . . . . . . . . . . .   4
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
    7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
    8.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   4
    9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
@@ -103,7 +102,8 @@ Table of Contents
    The following implementaions have been tested for interoperability
    test.  Each implementation has been classified according to the roles
    "client", "server", "intermediary" which are defined in [RFC7230].
-   Table 1 shows name, version and roles of tested implementations.
+   Table 1 shows name and roles of tested implementations.
+
 
 
 
@@ -114,12 +114,25 @@ Nakajima                 Expires January 1, 2015                [Page 2]
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 
-   +-------+-----------------------------------+-----------------------+
-   | Name  | Version                           | Roles                 |
-   +-------+-----------------------------------+-----------------------+
-   | nghtt | 1039dc59ea0fda5ef4296aebd72a01233 | client,server,interme |
-   | p2    | 579841f                           | diary                 |
-   +-------+-----------------------------------+-----------------------+
+           +---------------------+----------------------------+
+           | Name                | Roles                      |
+           +---------------------+----------------------------+
+           | [nghttp2]           | client,server,intermediary |
+           | [http2-katana]      | client,server              |
+           | [node-http2]        | client,server              |
+           | [MozillaFirefox]    | client                     |
+           | [iij-http2]         | client                     |
+           | [AkamaiGhost]       | intermediary               |
+           | [Chromium]          | client                     |
+           | [Twitter]           | client,server              |
+           | [http2-go]          | client,server              |
+           | [OkHttp2]           | client                     |
+           | [mruby-http2]       | client,server,intermediary |
+           | [curl]              | client                     |
+           | [cl-http2-protocol] | client,server              |
+           | [Netty]             | client,server              |
+           | [Jetty]             | client,server              |
+           +---------------------+----------------------------+
 
     Data from https://github.com/http2/http2-spec/wiki/Implementations
 
@@ -143,23 +156,10 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 4.8.  Authentication
 
-4.9.  SSL Negotiation
+4.9.  Server Push
 
-4.10.  Proxies
 
-4.11.  Server Push
 
-4.12.  TLS Cipher Suite
-
-4.13.  Opportunistic Encryption
-
-4.14.  Alternative Services
-
-5.  Interoperability Test Results
-
-6.  Security Considerations
-
-   [TBD]
 
 
 
@@ -169,6 +169,20 @@ Nakajima                 Expires January 1, 2015                [Page 3]
 
 Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
+
+4.10.  TLS Negotiation
+
+4.11.  TLS Cipher Suite
+
+4.12.  Opportunistic Encryption
+
+4.13.  Alternative Services
+
+5.  Interoperability Test Results
+
+6.  Security Considerations
+
+   [TBD]
 
 7.  IANA Considerations
 
@@ -201,14 +215,34 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
 
 9.3.  URL References
 
-   [akamaighost]
+   [AkamaiGhost]
               Akamai Technologies, Inc., "https://github.com/http2/
               http2-spec/wiki/Akamaighost", .
 
-   [chromium]
+
+
+Nakajima                 Expires January 1, 2015                [Page 4]
+
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
+
+
+   [Chromium]
               The Chromium Projects,
               "https://sites.google.com/a/chromium.org/dev/spdy/http2",
               .
+
+   [Jetty]    The Eclipse Foundation, "http://git.eclipse.org/c/jetty/
+              org.eclipse.jetty.project.git/tree/?h=jetty-http2", .
+
+   [MozillaFirefox]
+              Mozilla Foundation, "https://wiki.mozilla.org/Networking/
+              http2", .
+
+   [Netty]    The Netty project, "http://netty.io/", .
+
+   [OkHttp2]  Square, Inc., "https://github.com/square/okhttp", .
+
+   [Twitter]  Twitter Inc., "https://twitter.com", .
 
    [cl-http2-protocol]
               Akamai Technologies, Inc., "https://github.com/akamai/cl-
@@ -219,13 +253,6 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
    [http2-go]
               "https://github.com/Jxck/http2", .
 
-
-
-Nakajima                 Expires January 1, 2015                [Page 4]
-
-Internet-Draft       HTTP/2 Interoperability Survey            June 2014
-
-
    [http2-katana]
               Microsoft Open Technologies, Inc.,
               "https://github.com/MSOpenTech/http2-katana", .
@@ -234,17 +261,9 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
               Internet Initiative Japan Inc.,
               "https://github.com/shigeki/interop-iij-http2", .
 
-   [jetty]    The Eclipse Foundation, "http://git.eclipse.org/c/jetty/
-              org.eclipse.jetty.project.git/tree/?h=jetty-http2", .
-
-   [mozilla]  Mozilla Foundation, "https://wiki.mozilla.org/Networking/
-              http2", .
-
    [mruby-http2]
               Matsumoto, R., "https://github.com/matsumoto-r/mruby-
               http2", .
-
-   [netty]    The Netty project, "http://netty.io/", .
 
    [nghttp2]  Tsujikawa, T., "https://nghttp2.org/", .
 
@@ -252,9 +271,16 @@ Internet-Draft       HTTP/2 Interoperability Survey            June 2014
               Hurley, N., Belshe, M., and Y. Iwanaga,
               "https://github.com/molnarg/node-http2", .
 
-   [okhttp]   Square, Inc., "https://github.com/square/okhttp", .
 
-   [twitter]  Twitter Inc., "https://twitter.com", .
+
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 5]
+
+Internet-Draft       HTTP/2 Interoperability Survey            June 2014
+
 
 Author's Address
 
@@ -277,4 +303,34 @@ Author's Address
 
 
 
-Nakajima                 Expires January 1, 2015                [Page 5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nakajima                 Expires January 1, 2015                [Page 6]

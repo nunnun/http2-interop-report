@@ -90,12 +90,26 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
     </section>
 
     <section title="Interoperability Test Target">
-      <t>The following implementaions have been tested for interoperability test. Each implementation has been classified according to the roles "client", "server", "intermediary" which are defined in <xref target="RFC7230"/>. <xref target="implementaion_table"/> shows name, version and roles of tested implementations.</t>
+      <t>The following implementaions have been tested for interoperability test. Each implementation has been classified according to the roles "client", "server", "intermediary" which are defined in <xref target="RFC7230"/>. <xref target="implementaion_table"/> shows name and roles of tested implementations.</t>
       <texttable anchor="implementaion_table" title="Surveyed Implementations">
         <ttcol align="left">Name</ttcol>
-        <ttcol align="left">Version</ttcol>
         <ttcol align="left">Roles</ttcol>
-        <c>nghttp2</c><c>1039dc59ea0fda5ef4296aebd72a01233579841f</c><c>client,server,intermediary</c>
+        <c><xref target="nghttp2" /></c><c>client,server,intermediary</c>
+        <c><xref target="http2-katana" /></c><c>client,server</c>
+        <c><xref target="node-http2" /></c><c>client,server</c>
+        <c><xref target="MozillaFirefox" /></c><c>client</c>
+        <c><xref target="iij-http2" /></c><c>client</c>
+        <c><xref target="AkamaiGhost" /></c><c>intermediary</c>
+        <c><xref target="Chromium" /></c><c>client</c>
+        <c><xref target="Twitter" /></c><c>client,server</c>
+        <c><xref target="http2-go" /></c><c>client,server</c>
+        <c><xref target="OkHttp2" /></c><c>client</c>
+        <c><xref target="mruby-http2" /></c><c>client,server,intermediary</c>
+        <c><xref target="curl" /></c><c>client</c>
+        <c><xref target="cl-http2-protocol" /></c><c>client,server</c>
+        <c><xref target="Netty" /></c><c>client,server</c>
+        <c><xref target="Jetty" /></c><c>client,server</c>
+        
         <postamble>Data from https://github.com/http2/http2-spec/wiki/Implementations</postamble>
       </texttable>
 
@@ -136,15 +150,11 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 
       </section>
 
-      <section title="SSL Negotiation">
-
-      </section>
-
-      <section title="Proxies">
-
-      </section>
-
       <section title="Server Push">
+
+      </section>
+
+      <section title="TLS Negotiation">
 
       </section>
 
@@ -189,7 +199,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
       <?rfc include="reference.RFC.2119.xml"?>
 
       <?rfc include="reference.I-D.ietf-httpbis-http2.xml" ?>
-      <?rfc include="reference.I-D.ietf-httpbis-header-compression.xml" symrefs="no" ?>
+      <?rfc include="reference.I-D.ietf-httpbis-header-compression.xml" ?>
     </references>
 
     <references title="Informative References">
@@ -224,7 +234,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
           <date year=""></date>
         </front>
       </reference>
-      <reference anchor="mozilla">
+      <reference anchor="MozillaFirefox">
         <front>
           <title>https://wiki.mozilla.org/Networking/http2</title>
           <author>
@@ -242,7 +252,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
           <date year=""></date>
         </front>
       </reference>
-      <reference anchor="akamaighost">
+      <reference anchor="AkamaiGhost">
         <front>
           <title>https://github.com/http2/http2-spec/wiki/Akamaighost</title>
           <author>
@@ -251,7 +261,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
           <date year=""></date>
         </front>
       </reference>
-      <reference anchor="chromium">
+      <reference anchor="Chromium">
         <front>
           <title>https://sites.google.com/a/chromium.org/dev/spdy/http2</title>
           <author>
@@ -260,7 +270,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
           <date year=""></date>
         </front>
       </reference>
-      <reference anchor="twitter">
+      <reference anchor="Twitter">
         <front>
           <title>https://twitter.com</title>
           <author>
@@ -276,7 +286,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
           <date year=""></date>
         </front>
       </reference>
-      <reference anchor="okhttp">
+      <reference anchor="OkHttp2">
         <front>
           <title>https://github.com/square/okhttp</title>
           <author>
@@ -308,7 +318,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
           <date year=""></date>
         </front>
       </reference>
-      <reference anchor="netty">
+      <reference anchor="Netty">
         <front>
           <title>http://netty.io/</title>
           <author>
@@ -317,7 +327,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
           <date year=""></date>
         </front>
       </reference>
-      <reference anchor="jetty">
+      <reference anchor="Jetty">
         <front>
           <title>http://git.eclipse.org/c/jetty/org.eclipse.jetty.project.git/tree/?h=jetty-http2</title>
           <author>
