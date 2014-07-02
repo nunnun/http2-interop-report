@@ -55,7 +55,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 ・Deploymentを助ける
 をゴールとする。
            -->
-      <t>This document provides a survey of <xref target="I-D.ietf-httpbis-http2">HTTP/2</xref> and <xref target="I-D.ietf-httpbis-header-compression">HPACK</xref> implementations and interoperability tests. Goals are to help </t>
+      <t>This document provides a survey of <xref target="I-D.ietf-httpbis-http2">HTTP/2</xref> and <xref target="I-D.ietf-httpbis-header-compression">HPACK</xref> implementations and interoperability tests based on  <xref target="I-D.trace-httpbis-http2-test">HTTP/2.0 Testing</xref>. Goals of this document are to help improving HTTP/2 specifications and HTTP/2 implementions and deployments.</t>
 
     </abstract>
 
@@ -77,158 +77,183 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 
     </section>
 
-    <section title="Interoperability Test Target">
-      <t>The following implementaions have been tested for interoperability test. Each implementation has been classified according to the roles "client", "server", "intermediary" which are defined in <xref target="RFC7230"/>. <xref target="implementaion_table"/> shows name and roles of tested implementations.</t>
-      <texttable anchor="implementaion_table" title="Surveyed Implementations">
-        <ttcol align="left">Name</ttcol>
-        <ttcol align="left">Roles</ttcol>
-        <c><xref target="nghttp2" /></c><c>client,server,intermediary</c>
-        <c><xref target="http2-katana" /></c><c>client,server</c>
-        <c><xref target="node-http2" /></c><c>client,server</c>
-        <c><xref target="MozillaFirefox" /></c><c>client</c>
-        <c><xref target="iij-http2" /></c><c>client</c>
-        <c><xref target="AkamaiGhost" /></c><c>intermediary</c>
-        <c><xref target="Chromium" /></c><c>client</c>
-        <c><xref target="Twitter" /></c><c>client,server</c>
-        <c><xref target="http2-go" /></c><c>client,server</c>
-        <c><xref target="OkHttp2" /></c><c>client</c>
-        <c><xref target="mruby-http2" /></c><c>client,server</c>
-        <c><xref target="curl" /></c><c>client</c>
-        <c><xref target="cl-http2-protocol" /></c><c>client,server</c>
-        <c><xref target="Netty" /></c><c>client,server</c>
-        <c><xref target="Jetty" /></c><c>client,server</c>
-        
-        <postamble>Data from https://github.com/http2/http2-spec/wiki/Implementations</postamble>
-      </texttable>
+    <!--
+InteropテストはConnectぐらいしかできないので、各項目については実装されているかをチェックする方向にする
+         -->
 
-    </section>
+<section title="Interoperability Test Target">
+  <t>The following implementaions have been tested for interoperability test. Each implementation has been classified according to the roles "client", "server", "intermediary" which are defined in <xref target="RFC7230"/>. <xref target="implementaion_table"/> shows name and roles of tested implementations.</t>
+  <texttable anchor="implementaion_table" title="Surveyed Implementations">
+    <ttcol align="left">Name</ttcol>
+    <ttcol align="left">Roles</ttcol>
+    <c><xref target="nghttp2" /></c><c>client,server,intermediary</c>
+    <c><xref target="http2-katana" /></c><c>client,server</c>
+    <c><xref target="node-http2" /></c><c>client,server</c>
+    <c><xref target="MozillaFirefox" /></c><c>client</c>
+    <c><xref target="iij-http2" /></c><c>client</c>
+    <c><xref target="AkamaiGhost" /></c><c>intermediary</c>
+    <c><xref target="Chromium" /></c><c>client</c>
+    <c><xref target="Twitter" /></c><c>client,server</c>
+    <c><xref target="http2-go" /></c><c>client,server</c>
+    <c><xref target="OkHttp2" /></c><c>client</c>
+    <c><xref target="mruby-http2" /></c><c>client,server</c>
+    <c><xref target="curl" /></c><c>client</c>
+    <c><xref target="cl-http2-protocol" /></c><c>client,server</c>
+    <c><xref target="Netty" /></c><c>client,server</c>
+    <c><xref target="Jetty" /></c><c>client,server</c>
 
-    <section title="Interoperability Test Area">
+    <postamble>Data from https://github.com/http2/http2-spec/wiki/Implementations</postamble>
+  </texttable>
 
+</section>
 
-      <section title="Upgrade">
+<section title="Interoperability Test Area">
 
-        <t>
-        aaa
-        </t>
+  <section title="Connect">
 
-      </section>
+  </section>
 
-      <section title="Framing">
+  <section title="Upgrade">
+  </section>
 
-      </section>
+  <section title="Framing">
+  </section>
 
-      <section title="Flow Control">
+  <section title="Flow Control">
+  </section>
 
-      </section>
+  <section title="Streams and Multiplexing">
+  </section>
 
-      <section title="Streams and Multiplexing">
+  <section title="Header Compression">
+  </section>
 
-      </section>
+  <section title="Connection Management">
+  </section>
 
-      <section title="Header Compression">
+  <section title="Stream Prioritization">
+  </section>
 
-      </section>
+  <section title="Authentication">
+  </section>
 
-      <section title="Connection Management">
+  <section title="Server Push">
+  </section>
 
-      </section>
+  <section title="TLS Negotiation">
+  </section>
 
-      <section title="Stream Prioritization">
+  <section title="TLS Cipher Suite">
+  </section>
 
-      </section>
+  <section title="Opportunistic Encryption">
+  </section>
+  <section title="Alternative Services">
+  </section>
+</section>
 
-      <section title="Authentication">
+<section title="Interoperability Test Results">
 
-      </section>
+  <t><xref target="interop_result_connection"/> shows interoperability test result.</t>
+  <texttable anchor="interop_result_connection" title="Interoperability Test Result - Connection">
+    <ttcol align="left">&nbsp;</ttcol>
+    <ttcol align="left">nghttp2</ttcol>
+    <ttcol align="left">http2-katana</ttcol>
+    <ttcol align="left">node-http2</ttcol> 
+    <ttcol align="left">AkamaiGhost</ttcol>
+    <ttcol align="left">Twitter</ttcol>
+    <ttcol align="left">http2-go</ttcol>
+    <ttcol align="left">mruby-http2</ttcol>
+    <ttcol align="left">cl-http2-protocol</ttcol>
+    <ttcol align="left">Netty</ttcol>
+    <ttcol align="left">Jetty</ttcol>
+    <c><xref target="nghttp2" /></c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="http2-katana" /></c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="node-http2" /></c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="MozillaFirefox" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="Chromium" /></c><c>o</c><c>x</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="http2-go" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="OkHttp2" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="mruby-http2" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="curl" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="cl-http2-protocol" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c>
+    <c><xref target="Netty" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c>
+    <c><xref target="Jetty" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c>
+    <postamble>Vertical axis: Client, Horizontal: Server</postamble>
 
-      <section title="Server Push">
+  </texttable>
 
-      </section>
+</section>
 
-      <section title="TLS Negotiation">
-
-      </section>
-
-      <section title="TLS Cipher Suite">
-
-      </section>
-
-      <section title="Opportunistic Encryption">
-      </section>
-      <section title="Alternative Services">
-      </section>
-
-
-
-    </section>
-
-    <section title="Interoperability Test Results">
-
-      <section title="Upgrade">
-
-      </section>
-
-      <section title="Framing">
-
-      </section>
-
-      <section title="Flow Control">
-
-      </section>
-
-      <section title="Streams and Multiplexing">
-
-      </section>
-
-      <section title="Header Compression">
-
-      </section>
-
-      <section title="Connection Management">
-
-      </section>
-
-      <section title="Stream Prioritization">
-
-      </section>
-
-      <section title="Authentication">
-
-      </section>
-
-      <section title="Server Push">
-
-      </section>
-
-      <section title="TLS Negotiation">
-
-      </section>
-
-      <section title="TLS Cipher Suite">
-
-      </section>
-
-      <section title="Opportunistic Encryption">
-      </section>
-      <section title="Alternative Services">
-      </section>
-    </section>
-
-    <section title="Security Considerations">
-
-      <t>[TBD]</t>
+<section title="Implementation Survey">
 
 
-    </section>
+  <section title="Upgrade">
 
-    <section title="IANA Considerations">
+  </section>
 
-      <t>This document makes no request to IANA.</t>
-    </section>
+  <section title="Framing">
 
-    <section title="Contributors">
-    </section>
+  </section>
+
+  <section title="Flow Control">
+
+  </section>
+
+  <section title="Streams and Multiplexing">
+
+  </section>
+
+  <section title="Header Compression">
+
+  </section>
+
+  <section title="Connection Management">
+
+  </section>
+
+  <section title="Stream Prioritization">
+
+  </section>
+
+  <section title="Authentication">
+
+  </section>
+
+  <section title="Server Push">
+
+  </section>
+
+  <section title="TLS Negotiation">
+
+  </section>
+
+  <section title="TLS Cipher Suite">
+
+  </section>
+
+  <section title="Opportunistic Encryption">
+  </section>
+  <section title="Alternative Services">
+  </section>
+
+</section>
+
+
+<section title="Security Considerations">
+
+  <t>[TBD]</t>
+
+
+</section>
+
+<section title="IANA Considerations">
+
+  <t>This document makes no request to IANA.</t>
+</section>
+
+<section title="Contributors">
+</section>
   </middle>
 
   <back>
@@ -240,6 +265,7 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
 
       <?rfc include="reference.I-D.ietf-httpbis-http2.xml" ?>
       <?rfc include="reference.I-D.ietf-httpbis-header-compression.xml" ?>
+      <?rfc include="reference.I-D.trace-httpbis-http2-test.xml" ?>
     </references>
 
     <references title="Informative References">
