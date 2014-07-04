@@ -62,11 +62,12 @@ HTTPは幅広く使われていて、HTTP/2の仕様が策定されている。�
   </front>
 
   <middle>
+    <!--
     <section title="Introduction">
 
       <t>[TBD]</t>
     </section>
-
+-->
 
     <section title="Requirements">
 
@@ -110,7 +111,7 @@ InteropテストはConnectぐらいしかできないので、各項目につい
 <section title="Interoperability Test Area">
 
   <section title="Connect">
-
+    <t>Basic Connection Test is checking if the client and server(or intermediary) are able to establish HTTP/2 connection.</t>
   </section>
 
   <section title="Upgrade">
@@ -159,90 +160,29 @@ InteropテストはConnectぐらいしかできないので、各項目につい
     <ttcol align="left">&nbsp;</ttcol>
     <ttcol align="left">nghttp2</ttcol>
     <ttcol align="left">http2-katana</ttcol>
-    <ttcol align="left">node-http2</ttcol> 
-    <ttcol align="left">AkamaiGhost</ttcol>
+    <ttcol align="left">node-http2</ttcol>
+    <ttcol align="left">iij-http2</ttcol>
     <ttcol align="left">Twitter</ttcol>
-    <ttcol align="left">http2-go</ttcol>
     <ttcol align="left">mruby-http2</ttcol>
     <ttcol align="left">cl-http2-protocol</ttcol>
-    <ttcol align="left">Netty</ttcol>
-    <ttcol align="left">Jetty</ttcol>
-    <c><xref target="nghttp2" /></c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="http2-katana" /></c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="node-http2" /></c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="MozillaFirefox" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="Chromium" /></c><c>o</c><c>x</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="http2-go" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="OkHttp2" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="mruby-http2" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="curl" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="cl-http2-protocol" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c><c>&nbsp;</c>
-    <c><xref target="Netty" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c><c>&nbsp;</c>
-    <c><xref target="Jetty" /></c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>&nbsp;</c><c>\</c>
+    <c><xref target="nghttp2" /></c><c>\</c><c>x</c><c>x</c><c>o</c><c>o</c><c>o</c><c>o</c>
+    <c><xref target="http2-katana" /></c><c>x</c><c>\<c>x</c><c>x</c><c>x</c><c>x</c><c>x</c>
+    <c><xref target="node-http2" /></c><c>x</c><c>x</c><c>\</c><c>x</c><c>x</c><c>x</c><c>x</c>
+    <c><xref target="MozillaFirefox" /></c><c>o</c><c>x</c><c>x</c><c>o</c><c>o</c><c>x</c><c>x</c>
+    <c><xref target="Chromium" /></c><c>o</c><c>x</c><c>x</c><c>o</c><c>o</c><c>x</c><c>o</c>
+    <c><xref target="cl-http2-protocol" /></c><c>o</c><c>x</c><c>x</c><c>x</c><c>x</c><c>o</c><c>\</c>
     <postamble>Vertical axis: Client, Horizontal: Server</postamble>
-
   </texttable>
 
 </section>
 
 <section title="Implementation Survey">
 
-
-  <section title="Upgrade">
-
-  </section>
-
-  <section title="Framing">
-
-  </section>
-
-  <section title="Flow Control">
-
-  </section>
-
-  <section title="Streams and Multiplexing">
-
-  </section>
-
-  <section title="Header Compression">
-
-  </section>
-
-  <section title="Connection Management">
-
-  </section>
-
-  <section title="Stream Prioritization">
-
-  </section>
-
-  <section title="Authentication">
-
-  </section>
-
-  <section title="Server Push">
-
-  </section>
-
-  <section title="TLS Negotiation">
-
-  </section>
-
-  <section title="TLS Cipher Suite">
-
-  </section>
-
-  <section title="Opportunistic Encryption">
-  </section>
-  <section title="Alternative Services">
-  </section>
-
-</section>
-
+  <t>TBD.</t>
 
 <section title="Security Considerations">
 
-  <t>[TBD]</t>
+  <t>TBD.</t>
 
 
 </section>
