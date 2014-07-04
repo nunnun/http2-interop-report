@@ -34,7 +34,7 @@ Enter the full document title and an abbreviated version
           <city>Fujisawa, Kanagawa</city>
           <country>Japan</country>
         </postal>
-        <phone>+81466493424</phone>
+        <phone>+81.466.49.3424</phone>
         <email>hiro@awa.sfc.keio.ac.jp</email>
       </address>
     </author>
@@ -166,7 +166,7 @@ InteropテストはConnectぐらいしかできないので、各項目につい
     <ttcol align="left">mruby-http2</ttcol>
     <ttcol align="left">cl-http2-protocol</ttcol>
     <c><xref target="nghttp2" /></c><c>\</c><c>x</c><c>x</c><c>o</c><c>o</c><c>o</c><c>o</c>
-    <c><xref target="http2-katana" /></c><c>x</c><c>\<c>x</c><c>x</c><c>x</c><c>x</c><c>x</c>
+    <c><xref target="http2-katana" /></c><c>x</c><c>\</c><c>x</c><c>x</c><c>x</c><c>x</c><c>x</c>
     <c><xref target="node-http2" /></c><c>x</c><c>x</c><c>\</c><c>x</c><c>x</c><c>x</c><c>x</c>
     <c><xref target="MozillaFirefox" /></c><c>o</c><c>x</c><c>x</c><c>o</c><c>o</c><c>x</c><c>x</c>
     <c><xref target="Chromium" /></c><c>o</c><c>x</c><c>x</c><c>o</c><c>o</c><c>x</c><c>o</c>
@@ -179,6 +179,8 @@ InteropテストはConnectぐらいしかできないので、各項目につい
 <section title="Implementation Survey">
 
   <t>TBD.</t>
+
+</section>
 
 <section title="Security Considerations">
 

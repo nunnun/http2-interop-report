@@ -4,8 +4,8 @@
 
 HTTPbis                                                      H. Nakajima
 Internet-Draft                                      Keio University, W3C
-Intended status: Informational                              July 2, 2014
-Expires: January 3, 2015
+Intended status: Informational                              July 5, 2014
+Expires: January 6, 2015
 
 
                      HTTP/2 Interoperability Survey
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 3, 2015.
+   This Internet-Draft will expire on January 6, 2015.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Nakajima                 Expires January 3, 2015                [Page 1]
+Nakajima                 Expires January 6, 2015                [Page 1]
 
 Internet-Draft       HTTP/2 Interoperability Survey            July 2014
 
@@ -63,74 +63,56 @@ Internet-Draft       HTTP/2 Interoperability Survey            July 2014
 
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
-   2.  Requirements  . . . . . . . . . . . . . . . . . . . . . . . .   3
-   3.  Interoperability Test Target  . . . . . . . . . . . . . . . .   3
-   4.  Interoperability Test Area  . . . . . . . . . . . . . . . . .   3
-     4.1.  Connect . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.2.  Upgrade . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.3.  Framing . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.4.  Flow Control  . . . . . . . . . . . . . . . . . . . . . .   4
-     4.5.  Streams and Multiplexing  . . . . . . . . . . . . . . . .   4
-     4.6.  Header Compression  . . . . . . . . . . . . . . . . . . .   4
-     4.7.  Connection Management . . . . . . . . . . . . . . . . . .   4
-     4.8.  Stream Prioritization . . . . . . . . . . . . . . . . . .   4
-     4.9.  Authentication  . . . . . . . . . . . . . . . . . . . . .   4
-     4.10. Server Push . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.11. TLS Negotiation . . . . . . . . . . . . . . . . . . . . .   4
-     4.12. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   4
-     4.13. Opportunistic Encryption  . . . . . . . . . . . . . . . .   4
-     4.14. Alternative Services  . . . . . . . . . . . . . . . . . .   4
-   5.  Interoperability Test Results . . . . . . . . . . . . . . . .   4
-   6.  Implementation Survey . . . . . . . . . . . . . . . . . . . .   5
-     6.1.  Upgrade . . . . . . . . . . . . . . . . . . . . . . . . .   6
-     6.2.  Framing . . . . . . . . . . . . . . . . . . . . . . . . .   6
-     6.3.  Flow Control  . . . . . . . . . . . . . . . . . . . . . .   6
-     6.4.  Streams and Multiplexing  . . . . . . . . . . . . . . . .   6
-     6.5.  Header Compression  . . . . . . . . . . . . . . . . . . .   6
-     6.6.  Connection Management . . . . . . . . . . . . . . . . . .   6
-     6.7.  Stream Prioritization . . . . . . . . . . . . . . . . . .   6
-     6.8.  Authentication  . . . . . . . . . . . . . . . . . . . . .   6
-     6.9.  Server Push . . . . . . . . . . . . . . . . . . . . . . .   6
-     6.10. TLS Negotiation . . . . . . . . . . . . . . . . . . . . .   6
-     6.11. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   6
-     6.12. Opportunistic Encryption  . . . . . . . . . . . . . . . .   6
-     6.13. Alternative Services  . . . . . . . . . . . . . . . . . .   6
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
-   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
-   9.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   6
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .   6
-     10.2.  Informative References . . . . . . . . . . . . . . . . .   7
-     10.3.  URL References . . . . . . . . . . . . . . . . . . . . .   7
+   1.  Requirements  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Interoperability Test Target  . . . . . . . . . . . . . . . .   2
+   3.  Interoperability Test Area  . . . . . . . . . . . . . . . . .   3
+     3.1.  Connect . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     3.2.  Upgrade . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     3.3.  Framing . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     3.4.  Flow Control  . . . . . . . . . . . . . . . . . . . . . .   3
+     3.5.  Streams and Multiplexing  . . . . . . . . . . . . . . . .   3
+     3.6.  Header Compression  . . . . . . . . . . . . . . . . . . .   3
+     3.7.  Connection Management . . . . . . . . . . . . . . . . . .   3
+     3.8.  Stream Prioritization . . . . . . . . . . . . . . . . . .   3
+     3.9.  Authentication  . . . . . . . . . . . . . . . . . . . . .   4
+     3.10. Server Push . . . . . . . . . . . . . . . . . . . . . . .   4
+     3.11. TLS Negotiation . . . . . . . . . . . . . . . . . . . . .   4
+     3.12. TLS Cipher Suite  . . . . . . . . . . . . . . . . . . . .   4
+     3.13. Opportunistic Encryption  . . . . . . . . . . . . . . . .   4
+     3.14. Alternative Services  . . . . . . . . . . . . . . . . . .   4
+   4.  Interoperability Test Results . . . . . . . . . . . . . . . .   4
+   5.  Implementation Survey . . . . . . . . . . . . . . . . . . . .   4
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
+   8.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   5
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+     9.3.  URL References  . . . . . . . . . . . . . . . . . . . . .   5
 
-
-
-
-
-
-Nakajima                 Expires January 3, 2015                [Page 2]
-
-Internet-Draft       HTTP/2 Interoperability Survey            July 2014
-
-
-1.  Introduction
-
-   [TBD]
-
-2.  Requirements
+1.  Requirements
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
    document are to be interpreted as described in BCP 14, RFC 2119
    [RFC2119].
 
-3.  Interoperability Test Target
+2.  Interoperability Test Target
 
    The following implementaions have been tested for interoperability
    test.  Each implementation has been classified according to the roles
    "client", "server", "intermediary" which are defined in [RFC7230].
    Table 1 shows name and roles of tested implementations.
+
+
+
+
+
+
+Nakajima                 Expires January 6, 2015                [Page 2]
+
+Internet-Draft       HTTP/2 Interoperability Survey            July 2014
+
 
            +---------------------+----------------------------+
            | Name                | Roles                      |
@@ -156,7 +138,26 @@ Internet-Draft       HTTP/2 Interoperability Survey            July 2014
 
                      Table 1: Surveyed Implementations
 
-4.  Interoperability Test Area
+3.  Interoperability Test Area
+
+3.1.  Connect
+
+   Basic Connection Test is checking if the client and server(or
+   intermediary) are able to establish HTTP/2 connection.
+
+3.2.  Upgrade
+
+3.3.  Framing
+
+3.4.  Flow Control
+
+3.5.  Streams and Multiplexing
+
+3.6.  Header Compression
+
+3.7.  Connection Management
+
+3.8.  Stream Prioritization
 
 
 
@@ -164,112 +165,54 @@ Internet-Draft       HTTP/2 Interoperability Survey            July 2014
 
 
 
-
-Nakajima                 Expires January 3, 2015                [Page 3]
+Nakajima                 Expires January 6, 2015                [Page 3]
 
 Internet-Draft       HTTP/2 Interoperability Survey            July 2014
 
 
-4.1.  Connect
+3.9.  Authentication
 
-4.2.  Upgrade
+3.10.  Server Push
 
-4.3.  Framing
+3.11.  TLS Negotiation
 
-4.4.  Flow Control
+3.12.  TLS Cipher Suite
 
-4.5.  Streams and Multiplexing
+3.13.  Opportunistic Encryption
 
-4.6.  Header Compression
+3.14.  Alternative Services
 
-4.7.  Connection Management
-
-4.8.  Stream Prioritization
-
-4.9.  Authentication
-
-4.10.  Server Push
-
-4.11.  TLS Negotiation
-
-4.12.  TLS Cipher Suite
-
-4.13.  Opportunistic Encryption
-
-4.14.  Alternative Services
-
-5.  Interoperability Test Results
+4.  Interoperability Test Results
 
    Table 2 shows interoperability test result.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Nakajima                 Expires January 3, 2015                [Page 4]
-
-Internet-Draft       HTTP/2 Interoperability Survey            July 2014
-
-
-   +-------+----+-----+-----+-----+-----+-----+------+-------+----+----+
-   |       | ng | htt | nod | Aka | Twi | htt | mrub | cl-ht | Ne | Je |
-   |       | ht | p2- | e-h | mai | tte | p2- | y-ht | tp2-p | tt | tt |
-   |       | tp | kat | ttp | Gho | r   | go  | tp2  | rotoc | y  | y  |
-   |       | 2  | ana | 2   | st  |     |     |      | ol    |    |    |
-   +-------+----+-----+-----+-----+-----+-----+------+-------+----+----+
-   | [nght | \  |     |     |     |     |     |      |       |    |    |
-   | tp2]  |    |     |     |     |     |     |      |       |    |    |
-   | [http |    | \   |     |     |     |     |      |       |    |    |
-   | 2-kat |    |     |     |     |     |     |      |       |    |    |
-   | ana]  |    |     |     |     |     |     |      |       |    |    |
-   | [node |    |     | \   |     |     |     |      |       |    |    |
-   | -http |    |     |     |     |     |     |      |       |    |    |
-   | 2]    |    |     |     |     |     |     |      |       |    |    |
-   | [Mozi |    |     |     |     |     |     |      |       |    |    |
-   | llaFi |    |     |     |     |     |     |      |       |    |    |
-   | refox |    |     |     |     |     |     |      |       |    |    |
-   | ]     |    |     |     |     |     |     |      |       |    |    |
-   | [Chro |    |     |     |     |     |     |      |       |    |    |
-   | mium] |    |     |     |     |     |     |      |       |    |    |
-   | [http |    |     |     |     |     | \   |      |       |    |    |
-   | 2-go] |    |     |     |     |     |     |      |       |    |    |
-   | [OkHt |    |     |     |     |     |     |      |       |    |    |
-   | tp2]  |    |     |     |     |     |     |      |       |    |    |
-   | [mrub |    |     |     |     |     |     | \    |       |    |    |
-   | y-htt |    |     |     |     |     |     |      |       |    |    |
-   | p2]   |    |     |     |     |     |     |      |       |    |    |
-   | [curl | o  |     |     |     |     |     |      |       |    |    |
-   | ]     |    |     |     |     |     |     |      |       |    |    |
-   | [cl-h |    |     |     |     |     |     |      | \     |    |    |
-   | ttp2- |    |     |     |     |     |     |      |       |    |    |
-   | proto |    |     |     |     |     |     |      |       |    |    |
-   | col]  |    |     |     |     |     |     |      |       |    |    |
-   | [Nett |    |     |     |     |     |     |      |       | \  |    |
-   | y]    |    |     |     |     |     |     |      |       |    |    |
-   | [Jett |    |     |     |     |     |     |      |       |    | \  |
-   | y]    |    |     |     |     |     |     |      |       |    |    |
-   +-------+----+-----+-----+-----+-----+-----+------+-------+----+----+
+   +----------+-----+-------+-------+-------+------+--------+----------+
+   |          | ngh | http2 | node- | iij-  | Twit | mruby- | cl-http2 |
+   |          | ttp | -kata | http2 | http2 | ter  | http2  | -protoco |
+   |          | 2   | na    |       |       |      |        | l        |
+   +----------+-----+-------+-------+-------+------+--------+----------+
+   | [nghttp2 | \   | x     | x     | o     | o    | o      | o        |
+   | ]        |     |       |       |       |      |        |          |
+   | [http2-k | x   | \     | x     | x     | x    | x      | x        |
+   | atana]   |     |       |       |       |      |        |          |
+   | [node-ht | x   | x     | \     | x     | x    | x      | x        |
+   | tp2]     |     |       |       |       |      |        |          |
+   | [Mozilla | o   | x     | x     | o     | o    | x      | x        |
+   | Firefox] |     |       |       |       |      |        |          |
+   | [Chromiu | o   | x     | x     | o     | o    | x      | o        |
+   | m]       |     |       |       |       |      |        |          |
+   | [cl-http | o   | x     | x     | x     | x    | o      | \        |
+   | 2-protoc |     |       |       |       |      |        |          |
+   | ol]      |     |       |       |       |      |        |          |
+   +----------+-----+-------+-------+-------+------+--------+----------+
 
                  Vertical axis: Client, Horizontal: Server
 
             Table 2: Interoperability Test Result - Connection
 
-6.  Implementation Survey
+5.  Implementation Survey
+
+   TBD.
 
 
 
@@ -277,66 +220,30 @@ Internet-Draft       HTTP/2 Interoperability Survey            July 2014
 
 
 
-Nakajima                 Expires January 3, 2015                [Page 5]
+
+Nakajima                 Expires January 6, 2015                [Page 4]
 
 Internet-Draft       HTTP/2 Interoperability Survey            July 2014
 
 
-6.1.  Upgrade
+6.  Security Considerations
 
-6.2.  Framing
+   TBD.
 
-6.3.  Flow Control
-
-6.4.  Streams and Multiplexing
-
-6.5.  Header Compression
-
-6.6.  Connection Management
-
-6.7.  Stream Prioritization
-
-6.8.  Authentication
-
-6.9.  Server Push
-
-6.10.  TLS Negotiation
-
-6.11.  TLS Cipher Suite
-
-6.12.  Opportunistic Encryption
-
-6.13.  Alternative Services
-
-7.  Security Considerations
-
-   [TBD]
-
-8.  IANA Considerations
+7.  IANA Considerations
 
    This document makes no request to IANA.
 
-9.  Contributors
+8.  Contributors
 
-10.  References
+9.  References
 
-10.1.  Normative References
+9.1.  Normative References
 
    [I-D.ietf-httpbis-header-compression]
               Peon, R. and H. Ruellan, "HPACK - Header Compression for
               HTTP/2", draft-ietf-httpbis-header-compression-08 (work in
               progress), June 2014.
-
-
-
-
-
-
-
-Nakajima                 Expires January 3, 2015                [Page 6]
-
-Internet-Draft       HTTP/2 Interoperability Survey            July 2014
-
 
    [I-D.ietf-httpbis-http2]
               Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
@@ -351,13 +258,13 @@ Internet-Draft       HTTP/2 Interoperability Survey            July 2014
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997.
 
-10.2.  Informative References
+9.2.  Informative References
 
    [RFC7230]  Fielding, R. and J. Reschke, "Hypertext Transfer Protocol
               (HTTP/1.1): Message Syntax and Routing", RFC 7230, June
               2014.
 
-10.3.  URL References
+9.3.  URL References
 
    [AkamaiGhost]
               Akamai Technologies, Inc., "https://github.com/http2/
@@ -367,6 +274,13 @@ Internet-Draft       HTTP/2 Interoperability Survey            July 2014
               The Chromium Projects,
               "https://sites.google.com/a/chromium.org/dev/spdy/http2",
               .
+
+
+
+Nakajima                 Expires January 6, 2015                [Page 5]
+
+Internet-Draft       HTTP/2 Interoperability Survey            July 2014
+
 
    [Jetty]    The Eclipse Foundation, "http://git.eclipse.org/c/jetty/
               org.eclipse.jetty.project.git/tree/?h=jetty-http2", .
@@ -386,13 +300,6 @@ Internet-Draft       HTTP/2 Interoperability Survey            July 2014
               http2-protocol", .
 
    [curl]     Stenberg, D., "http://curl.haxx.se/", .
-
-
-
-Nakajima                 Expires January 3, 2015                [Page 7]
-
-Internet-Draft       HTTP/2 Interoperability Survey            July 2014
-
 
    [http2-go]
               "https://github.com/Jxck/http2", .
@@ -417,13 +324,27 @@ Internet-Draft       HTTP/2 Interoperability Survey            July 2014
 
 Author's Address
 
+
+
+
+
+
+
+
+
+
+Nakajima                 Expires January 6, 2015                [Page 6]
+
+Internet-Draft       HTTP/2 Interoperability Survey            July 2014
+
+
    Hirotaka Nakajima
    Keio University, W3C
    5322 Endo
    Fujisawa, Kanagawa
    Japan
 
-   Phone: +81466493424
+   Phone: +81.466.49.3424
    EMail: hiro@awa.sfc.keio.ac.jp
 
 
@@ -445,4 +366,27 @@ Author's Address
 
 
 
-Nakajima                 Expires January 3, 2015                [Page 8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nakajima                 Expires January 6, 2015                [Page 7]
